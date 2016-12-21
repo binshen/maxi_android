@@ -7,12 +7,19 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.daimajia.slider.library.Indicators.PagerIndicator;
+import com.daimajia.slider.library.SliderLayout;
 import com.daimajia.slider.library.SliderTypes.BaseSliderView;
+import com.daimajia.slider.library.SliderTypes.TextSliderView;
 import com.daimajia.slider.library.Tricks.ViewPagerEx;
 import com.maxi.waterpurifier.R;
 import com.maxi.waterpurifier.base.BaseFragment;
 
+import java.util.HashMap;
+
 public class HomeFragment extends BaseFragment implements BaseSliderView.OnSliderClickListener, ViewPagerEx.OnPageChangeListener {
+
+    private SliderLayout mSlider;
 
     private View view;
 
@@ -27,6 +34,34 @@ public class HomeFragment extends BaseFragment implements BaseSliderView.OnSlide
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
 
+        mSlider = (SliderLayout) view.findViewById(R.id.slider);
+
+        HashMap<String,String> url_maps = new HashMap<String, String>();
+        url_maps.put("Hannibal", "http://static2.hypable.com/wp-content/uploads/2013/12/hannibal-season-2-release-date.jpg");
+        url_maps.put("Big Bang Theory", "http://tvfiles.alphacoders.com/100/hdclearart-10.png");
+        url_maps.put("House of Cards", "http://cdn3.nflximg.net/images/3093/2043093.jpg");
+        url_maps.put("Game of Thrones", "http://images.boomsbeat.com/data/images/full/19640/game-of-thrones-season-4-jpg.jpg");
+
+        for(String name : url_maps.keySet()){
+            TextSliderView textSliderView = new TextSliderView(getContext());
+            //textSliderView.description(name);
+            textSliderView.image(url_maps.get(name));
+            textSliderView.setScaleType(BaseSliderView.ScaleType.Fit);
+            //textSliderView.bundle(new Bundle());
+            //textSliderView.getBundle().putString("extra",name);
+            //textSliderView.setOnSliderClickListener(this);
+            mSlider.addSlider(textSliderView);
+        }
+
+        mSlider.setPresetTransformer(SliderLayout.Transformer.Accordion);
+        mSlider.setPresetIndicator(SliderLayout.PresetIndicators.Center_Bottom);
+
+        //mSlider.setIndicatorVisibility(PagerIndicator.IndicatorVisibility.Visible);
+        //mSlider.setCustomAnimation(new DescriptionAnimation());
+        mSlider.setDuration(5000);
+        mSlider.addOnPageChangeListener(this);
+
+        mSlider.setCustomIndicator((PagerIndicator) view.findViewById(R.id.custom_indicator));
     }
 
     @Override
