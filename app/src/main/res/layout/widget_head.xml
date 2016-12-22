@@ -14,7 +14,6 @@
         android:layout_width="60dp"
         android:layout_height="match_parent"
         android:layout_marginLeft="0.0dp"
-        android:src="@null"
         android:layout_alignParentLeft="true"
         android:layout_centerVertical="true" />
 

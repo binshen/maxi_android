@@ -7,5 +7,7 @@
 
     <color name="white">#ffffffff</color>
     <color name="black">#ff000000</color>
+
+    <color name="maxi_head_main_color">#ff2698f9</color>
     <color name="bottom_nav_color">#ff2698fa</color>
 </resources>
