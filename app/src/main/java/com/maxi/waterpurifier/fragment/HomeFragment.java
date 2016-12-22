@@ -12,12 +12,17 @@ import com.daimajia.slider.library.SliderLayout;
 import com.daimajia.slider.library.SliderTypes.BaseSliderView;
 import com.daimajia.slider.library.SliderTypes.DefaultSliderView;
 import com.daimajia.slider.library.Tricks.ViewPagerEx;
+import com.etsy.android.grid.StaggeredGridView;
 import com.maxi.waterpurifier.R;
+import com.maxi.waterpurifier.adapter.MainAdAdapter;
 import com.maxi.waterpurifier.base.BaseFragment;
 
 public class HomeFragment extends BaseFragment implements BaseSliderView.OnSliderClickListener, ViewPagerEx.OnPageChangeListener {
 
     private SliderLayout mSlider;
+
+    private StaggeredGridView mGridView;
+    private MainAdAdapter mAdapter;
 
     private View view;
 
@@ -62,16 +67,18 @@ public class HomeFragment extends BaseFragment implements BaseSliderView.OnSlide
         sliderView4.image(R.drawable.home_slider1);
         sliderView4.setScaleType(BaseSliderView.ScaleType.Fit);
         mSlider.addSlider(sliderView4);
-
         mSlider.setPresetTransformer(SliderLayout.Transformer.Accordion);
         mSlider.setPresetIndicator(SliderLayout.PresetIndicators.Center_Bottom);
-
         //mSlider.setIndicatorVisibility(PagerIndicator.IndicatorVisibility.Visible);
         //mSlider.setCustomAnimation(new DescriptionAnimation());
         mSlider.setDuration(5000);
         mSlider.addOnPageChangeListener(this);
-
         mSlider.setCustomIndicator((PagerIndicator) view.findViewById(R.id.custom_indicator));
+
+
+        mGridView = (StaggeredGridView) view.findViewById(R.id.grid_view);
+        mAdapter = new MainAdAdapter(getContext());
+        mGridView.setAdapter(mAdapter);
     }
 
     @Override
