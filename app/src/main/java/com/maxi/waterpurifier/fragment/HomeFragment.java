@@ -76,9 +76,9 @@ public class HomeFragment extends BaseFragment implements BaseSliderView.OnSlide
         mSlider.setCustomIndicator((PagerIndicator) view.findViewById(R.id.custom_indicator));
 
 
-        mGridView = (StaggeredGridView) view.findViewById(R.id.grid_view);
-        mAdapter = new MainAdAdapter(getContext());
-        mGridView.setAdapter(mAdapter);
+//        mGridView = (StaggeredGridView) view.findViewById(R.id.grid_view);
+//        mAdapter = new MainAdAdapter(getContext());
+//        mGridView.setAdapter(mAdapter);
     }
 
     @Override
