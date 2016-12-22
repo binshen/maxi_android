@@ -147,8 +147,24 @@
             android:layout_height="5dp"
             android:background="@drawable/bg_split_line"/>
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="horizontal">
 
-        
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:gravity="center_vertical"
+                android:text="广告位"
+                android:textSize="20sp"
+                android:drawablePadding="10dp"
+                android:drawableLeft="@drawable/bg_split_red_1x"/>
+        </LinearLayout>
+
+
+
     </LinearLayout>
 
 </FrameLayout>
