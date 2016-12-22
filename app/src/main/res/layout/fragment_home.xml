@@ -60,29 +60,41 @@
                 android:orientation="horizontal"
                 android:padding="10dp">
 
-                <ImageView
+                <TextView
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:src="@mipmap/home_icon_1" />
+                    android:gravity="center_horizontal"
+                    android:text="淼溪净水"
+                    android:drawablePadding="3dp"
+                    android:drawableTop="@mipmap/home_icon_1" />
 
-                <ImageView
+                <TextView
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:src="@mipmap/home_icon_2" />
+                    android:gravity="center_horizontal"
+                    android:text="智能家居"
+                    android:drawablePadding="3dp"
+                    android:drawableTop="@mipmap/home_icon_2" />
 
-                <ImageView
+                <TextView
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:src="@mipmap/home_icon_3" />
+                    android:gravity="center_horizontal"
+                    android:text="远程医疗"
+                    android:drawablePadding="3dp"
+                    android:drawableTop="@mipmap/home_icon_3" />
 
-                <ImageView
+                <TextView
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:src="@mipmap/home_icon_4" />
+                    android:gravity="center_horizontal"
+                    android:text="便民服务"
+                    android:drawablePadding="3dp"
+                    android:drawableTop="@mipmap/home_icon_4" />
             </LinearLayout>
 
             <LinearLayout
@@ -91,29 +103,41 @@
                 android:orientation="horizontal"
                 android:padding="10dp">
 
-                <ImageView
+                <TextView
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:src="@mipmap/home_icon_5" />
+                    android:gravity="center_horizontal"
+                    android:text="外卖订餐"
+                    android:drawablePadding="3dp"
+                    android:drawableTop="@mipmap/home_icon_5" />
 
-                <ImageView
+                <TextView
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:src="@mipmap/home_icon_6" />
+                    android:gravity="center_horizontal"
+                    android:text="蔬果生鲜"
+                    android:drawablePadding="3dp"
+                    android:drawableTop="@mipmap/home_icon_6" />
 
-                <ImageView
+                <TextView
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:src="@mipmap/home_icon_7" />
+                    android:gravity="center_horizontal"
+                    android:text="装修建材"
+                    android:drawablePadding="3dp"
+                    android:drawableTop="@mipmap/home_icon_7" />
 
-                <ImageView
+                <TextView
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:src="@mipmap/home_icon_8" />
+                    android:gravity="center_horizontal"
+                    android:text="社区资讯"
+                    android:drawablePadding="3dp"
+                    android:drawableTop="@mipmap/home_icon_8" />
             </LinearLayout>
 
         </LinearLayout>
