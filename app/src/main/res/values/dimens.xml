@@ -8,4 +8,7 @@
 
     <dimen name="main_ad_height_1">160dp</dimen>
     <dimen name="main_ad_height_2">200dp</dimen>
+
+    <dimen name="fixed_label_active">12sp</dimen>
+    <dimen name="fixed_icon_grid">20dp</dimen>
 </resources>

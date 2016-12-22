@@ -39,7 +39,6 @@ public class MainActivity extends BaseActivity implements BottomNavigationBar.On
         bottomNavigationBar.addItem(new BottomNavigationItem(R.mipmap.main_mine_2, "我的").setActiveColor("#ff2698fa").setInactiveIconResource(R.mipmap.main_mine_1));
         bottomNavigationBar.setFirstSelectedPosition(0).initialise();
 
-
         fragments = getFragments();
         setDefaultFragment();
         bottomNavigationBar.setTabSelectedListener(this);
