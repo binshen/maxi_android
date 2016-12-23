@@ -6,6 +6,7 @@ import android.support.annotation.Nullable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
 
 import com.daimajia.slider.library.Indicators.PagerIndicator;
 import com.daimajia.slider.library.SliderLayout;
@@ -16,10 +17,20 @@ import com.etsy.android.grid.StaggeredGridView;
 import com.maxi.waterpurifier.R;
 import com.maxi.waterpurifier.adapter.MainAdAdapter;
 import com.maxi.waterpurifier.base.BaseFragment;
+import com.maxi.waterpurifier.widget.ImageTextView;
 
-public class HomeFragment extends BaseFragment implements BaseSliderView.OnSliderClickListener, ViewPagerEx.OnPageChangeListener {
+public class HomeFragment extends BaseFragment implements BaseSliderView.OnSliderClickListener, ViewPagerEx.OnPageChangeListener, View.OnClickListener {
 
     private SliderLayout mSlider;
+
+    private ImageTextView mItvMainIcon1;
+    private ImageTextView mItvMainIcon2;
+    private ImageTextView mItvMainIcon3;
+    private ImageTextView mItvMainIcon4;
+    private ImageTextView mItvMainIcon5;
+    private ImageTextView mItvMainIcon6;
+    private ImageTextView mItvMainIcon7;
+    private ImageTextView mItvMainIcon8;
 
     private StaggeredGridView mGridView;
     private MainAdAdapter mAdapter;
@@ -79,6 +90,23 @@ public class HomeFragment extends BaseFragment implements BaseSliderView.OnSlide
 //        mGridView = (StaggeredGridView) view.findViewById(R.id.grid_view);
 //        mAdapter = new MainAdAdapter(getContext());
 //        mGridView.setAdapter(mAdapter);
+
+        mItvMainIcon1 = (ImageTextView) view.findViewById(R.id.itv_main_icon_1);
+        mItvMainIcon2 = (ImageTextView) view.findViewById(R.id.itv_main_icon_2);
+        mItvMainIcon3 = (ImageTextView) view.findViewById(R.id.itv_main_icon_3);
+        mItvMainIcon4 = (ImageTextView) view.findViewById(R.id.itv_main_icon_4);
+        mItvMainIcon5 = (ImageTextView) view.findViewById(R.id.itv_main_icon_5);
+        mItvMainIcon6 = (ImageTextView) view.findViewById(R.id.itv_main_icon_6);
+        mItvMainIcon7 = (ImageTextView) view.findViewById(R.id.itv_main_icon_7);
+        mItvMainIcon8 = (ImageTextView) view.findViewById(R.id.itv_main_icon_8);
+        mItvMainIcon1.setOnClickListener(this);
+        mItvMainIcon2.setOnClickListener(this);
+        mItvMainIcon3.setOnClickListener(this);
+        mItvMainIcon4.setOnClickListener(this);
+        mItvMainIcon5.setOnClickListener(this);
+        mItvMainIcon6.setOnClickListener(this);
+        mItvMainIcon7.setOnClickListener(this);
+        mItvMainIcon8.setOnClickListener(this);
     }
 
     @Override
@@ -99,5 +127,35 @@ public class HomeFragment extends BaseFragment implements BaseSliderView.OnSlide
     @Override
     public void onPageScrollStateChanged(int state) {
 
+    }
+
+    @Override
+    public void onClick(View v) {
+        switch (v.getId()) {
+            case R.id.itv_main_icon_1:
+                Toast.makeText(getContext(), "您点击了：淼溪净水", Toast.LENGTH_SHORT).show();
+                break;
+            case R.id.itv_main_icon_2:
+                Toast.makeText(getContext(), "您点击了：智能家居", Toast.LENGTH_SHORT).show();
+                break;
+            case R.id.itv_main_icon_3:
+                Toast.makeText(getContext(), "您点击了：远程医疗", Toast.LENGTH_SHORT).show();
+                break;
+            case R.id.itv_main_icon_4:
+                Toast.makeText(getContext(), "您点击了：便民服务", Toast.LENGTH_SHORT).show();
+                break;
+            case R.id.itv_main_icon_5:
+                Toast.makeText(getContext(), "您点击了：外卖订餐", Toast.LENGTH_SHORT).show();
+                break;
+            case R.id.itv_main_icon_6:
+                Toast.makeText(getContext(), "您点击了：蔬果生鲜", Toast.LENGTH_SHORT).show();
+                break;
+            case R.id.itv_main_icon_7:
+                Toast.makeText(getContext(), "您点击了：装修建材", Toast.LENGTH_SHORT).show();
+                break;
+            case R.id.itv_main_icon_8:
+                Toast.makeText(getContext(), "您点击了：社区资讯", Toast.LENGTH_SHORT).show();
+                break;
+        }
     }
 }
