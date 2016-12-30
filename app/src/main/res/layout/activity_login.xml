@@ -4,33 +4,112 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/white"
     tools:context="com.maxi.waterpurifier.LoginActivity">
+
+    <include layout="@layout/widget_head" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingTop="50dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp" >
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:hint="请输入手机号"
+                android:textColorHint="#FF979797"
+                android:paddingLeft="45dp"
+                android:background="@null"
+                android:inputType="phone"/>
+
+            <RelativeLayout
+                android:layout_width="40dp"
+                android:layout_height="match_parent" >
+
+                <ImageView
+                    android:layout_width="22dp"
+                    android:layout_height="30dp"
+                    android:layout_centerInParent="true"
+                    android:scaleType="centerInside"
+                    android:src="@mipmap/icon_shouji" />
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:src="@drawable/sp_text_bottom" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@android:color/white" >
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:hint="输入密码"
+                android:textColorHint="#FF979797"
+                android:paddingLeft="45dp"
+                android:background="@null"
+                android:inputType="textPassword" />
+
+            <RelativeLayout
+                android:layout_width="40dp"
+                android:layout_height="match_parent" >
+
+                <ImageView
+                    android:layout_width="22dp"
+                    android:layout_height="30dp"
+                    android:layout_centerInParent="true"
+                    android:scaleType="centerInside"
+                    android:src="@mipmap/icon_mima" />
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:src="@drawable/sp_text_bottom" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:paddingTop="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="忘记密码"
+                android:textSize="18sp"
+                android:textColor="#FF979797"
+                android:paddingRight="40dp" />
+        </LinearLayout>
+    </LinearLayout>
 
     <LinearLayout
         android:gravity="bottom"
-        android:orientation="horizontal"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:paddingBottom="40dp">
-
-        <ImageView
-            android:id="@id/iv_btn_register"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:src="@mipmap/btn_register"
-            android:paddingLeft="10dp"
-            android:paddingRight="10dp"/>
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:paddingBottom="40dp" >
 
         <ImageView
             android:id="@id/iv_btn_login"
-            android:layout_width="0dp"
+            android:layout_gravity="bottom"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:src="@mipmap/btn_login"
-            android:paddingLeft="10dp"
-            android:paddingRight="10dp" />
-
+            android:src="@mipmap/btn_login2" />
     </LinearLayout>
 
 </LinearLayout>

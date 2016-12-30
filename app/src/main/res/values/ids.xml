@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <item type="id" name="btn_head_left">false</item>
+    <item type="id" name="tv_head_title">false</item>
     <item type="id" name="btn_head_right">false</item>
 
     <item type="id" name="slider">false</item>
