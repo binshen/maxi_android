@@ -4,11 +4,13 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.maxi.waterpurifier.base.BaseActivity;
 
 public class RegisterActivity extends BaseActivity implements View.OnClickListener {
 
+    private ImageView mIvSendCode;
     private ImageView mIvBtnRegister;
 
     @Override
@@ -20,6 +22,11 @@ public class RegisterActivity extends BaseActivity implements View.OnClickListen
         btn_head_left.setOnClickListener(this);
         TextView mTvHeader = (TextView) findViewById(R.id.tv_head_title);
         mTvHeader.setText("注册");
+
+        mIvSendCode = (ImageView) findViewById(R.id.iv_btn_send_code);
+        mIvSendCode.setOnClickListener(this);
+        mIvBtnRegister = (ImageView) findViewById(R.id.iv_btn_register);
+        mIvBtnRegister.setOnClickListener(this);
     }
 
     @Override
@@ -27,6 +34,14 @@ public class RegisterActivity extends BaseActivity implements View.OnClickListen
         switch (v.getId()) {
             case R.id.btn_head_left:
                 finish();
+                break;
+
+            case R.id.iv_btn_register:
+                finish();
+                break;
+
+            case R.id.iv_btn_send_code:
+                Toast.makeText(this, "您点击了：发送验证码", Toast.LENGTH_SHORT).show();
                 break;
         }
     }

@@ -28,7 +28,8 @@
                 android:textColorHint="#FF979797"
                 android:paddingLeft="45dp"
                 android:background="@null"
-                android:inputType="phone"/>
+                android:inputType="phone"
+                android:maxLength="11" />
 
             <RelativeLayout
                 android:layout_width="40dp"
@@ -51,8 +52,7 @@
 
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:background="@android:color/white" >
+            android:layout_height="50dp">
 
             <EditText
                 android:layout_width="match_parent"
@@ -61,7 +61,8 @@
                 android:textColorHint="#FF979797"
                 android:paddingLeft="45dp"
                 android:background="@null"
-                android:inputType="textPassword" />
+                android:inputType="textPassword"
+                android:maxLength="16" />
 
             <RelativeLayout
                 android:layout_width="40dp"
