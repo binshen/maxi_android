@@ -25,8 +25,8 @@ public class LoginActivity extends BaseActivity implements View.OnClickListener 
 
         mIvBtnLogin = (ImageView) findViewById(R.id.iv_btn_login);
         mIvBtnLogin.setOnClickListener(this);
-        //mTvBtnForgetPwd = (TextView) findViewById(R.id.tv_btn_register);
-        //mTvBtnForgetPwd.setOnClickListener(this);
+        mTvBtnForgetPwd = (TextView) findViewById(R.id.tv_btn_forget_pwd);
+        mTvBtnForgetPwd.setOnClickListener(this);
     }
 
     @Override
@@ -37,11 +37,11 @@ public class LoginActivity extends BaseActivity implements View.OnClickListener 
                 break;
 
             case R.id.iv_btn_login:
-                startActivity(new Intent(this, LoginActivity.class));
+                startActivity(new Intent(this, MainActivity.class));
                 break;
 
-            case R.id.iv_btn_register:
-                startActivity(new Intent(this, RegisterActivity.class));
+            case R.id.tv_btn_forget_pwd:
+                startActivity(new Intent(this, ForgetPwdActivity.class));
                 break;
         }
     }

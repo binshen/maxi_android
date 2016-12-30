@@ -7,19 +7,19 @@ import android.widget.TextView;
 
 import com.maxi.waterpurifier.base.BaseActivity;
 
-public class RegisterActivity extends BaseActivity implements View.OnClickListener {
+public class ForgetPwdActivity extends BaseActivity implements View.OnClickListener {
 
-    private ImageView mIvBtnRegister;
+    private ImageView mIvBtnForgetPwd;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_register);
+        setContentView(R.layout.activity_forget_pwd);
 
         ImageView btn_head_left = (ImageView) findViewById(R.id.btn_head_left);
         btn_head_left.setOnClickListener(this);
         TextView mTvHeader = (TextView) findViewById(R.id.tv_head_title);
-        mTvHeader.setText("注册");
+        mTvHeader.setText("重置密码");
     }
 
     @Override
