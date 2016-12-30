@@ -20,7 +20,7 @@
         android:src="@mipmap/btn_back" />
 
     <TextView
-        android:textSize="19.0sp"
+        android:textSize="22.0sp"
         android:textColor="@color/black"
         android:id="@id/tv_head_title"
         android:layout_width="wrap_content"
@@ -33,7 +33,7 @@
         android:padding="0.0dp"
         android:visibility="visible"
         android:layout_width="wrap_content"
-        android:layout_height="fill_parent"
+        android:layout_height="match_parent"
         android:layout_marginRight="0.0dp"
         android:layout_alignParentRight="true"
         android:layout_centerVertical="true" />
