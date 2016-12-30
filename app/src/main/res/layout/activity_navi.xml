@@ -4,7 +4,8 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.maxi.waterpurifier.LoginActivity">
+    android:background="@mipmap/login_bg"
+    tools:context="com.maxi.waterpurifier.NaviActivity">
 
     <LinearLayout
         android:gravity="bottom"

@@ -23,6 +23,6 @@ public class SplashActivity extends Activity implements Runnable {
             e.printStackTrace();
         }
         finish();
-        startActivity(new Intent(this, LoginActivity.class));
+        startActivity(new Intent(this, NaviActivity.class));
     }
 }

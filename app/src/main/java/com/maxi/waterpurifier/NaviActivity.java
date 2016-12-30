@@ -7,7 +7,7 @@ import android.widget.ImageView;
 
 import com.maxi.waterpurifier.base.BaseActivity;
 
-public class LoginActivity extends BaseActivity implements View.OnClickListener {
+public class NaviActivity extends BaseActivity implements View.OnClickListener {
 
     private ImageView mIvBtnLogin;
     private ImageView mIvBtnRegister;
@@ -15,7 +15,7 @@ public class LoginActivity extends BaseActivity implements View.OnClickListener 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_login);
+        setContentView(R.layout.activity_navi);
 
         mIvBtnLogin = (ImageView) findViewById(R.id.iv_btn_login);
         mIvBtnLogin.setOnClickListener(this);
