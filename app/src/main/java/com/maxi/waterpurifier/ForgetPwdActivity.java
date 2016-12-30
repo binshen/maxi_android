@@ -36,6 +36,10 @@ public class ForgetPwdActivity extends BaseActivity implements View.OnClickListe
                 finish();
                 break;
 
+            case R.id.iv_btn_forget_pwd:
+                finish();
+                break;
+
             case R.id.iv_btn_send_code:
                 Toast.makeText(this, "您点击了：发送验证码", Toast.LENGTH_SHORT).show();
                 break;
