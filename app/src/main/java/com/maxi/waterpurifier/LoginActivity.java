@@ -3,7 +3,6 @@ package com.maxi.waterpurifier;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
-import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageView;
@@ -79,6 +78,7 @@ public class LoginActivity extends BaseActivity implements View.OnClickListener 
     }
 
     public void login(final String tel, final String pwd) {
+        mLoadDialog.show();
 
         Map<String, String> params = new HashMap<>();
         params.put("tel", tel);
@@ -88,19 +88,21 @@ public class LoginActivity extends BaseActivity implements View.OnClickListener 
 
             @Override
             public void onError(Call call, Exception e, int id) {
-                Toast.makeText(getApplicationContext(), e.toString(), Toast.LENGTH_SHORT).show();
+                Toast.makeText(getApplicationContext(), Constants.IS_DEBUG_MODE ? e.toString() : "网络故障，请稍候重试", Toast.LENGTH_SHORT).show();
             }
 
             @Override
             public void onResponse(Result<User> response, int id) {
+                application.loginUser = response.getContent();
                 int code = response.getCode();
                 if(code < 0) {
                     Toast.makeText(getApplicationContext(), response.getError(), Toast.LENGTH_SHORT).show();
+                    if (mLoadDialog.isShowing()) {
+                        mLoadDialog.dismiss();
+                    }
                 } else {
-                    User user = response.getContent();
-                    Log.d("LoginActivity", user.toString());
-
                     startActivity(new Intent(getApplicationContext(), MainActivity.class));
+                    finish();
                 }
             }
         });

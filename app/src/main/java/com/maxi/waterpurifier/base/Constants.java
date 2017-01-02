@@ -6,6 +6,8 @@ package com.maxi.waterpurifier.base;
 
 public interface Constants {
 
+    public final boolean IS_DEBUG_MODE = false;
+
     public final String API_BASE_PATH = "http://120.55.161.114:8888";
 
     public final String LOGIN = API_BASE_PATH + "/user/login"; //用户登录
