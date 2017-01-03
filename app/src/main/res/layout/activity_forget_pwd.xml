@@ -104,14 +104,17 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1">
 
-                <ImageView
+                <TextView
                     android:id="@id/iv_btn_send_code"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentRight="true"
-                    android:scaleType="fitXY"
-                    android:src="@mipmap/btn_send_code"
-                    android:paddingTop="10dp" />
+                    android:gravity="center"
+                    android:text="获取验证码"
+                    android:textSize="15sp"
+                    android:textColor="#ff1b96fe"
+                    android:background="@mipmap/btn_send_code_bg"
+                    android:layout_marginTop="10dp" />
             </LinearLayout>
 
         </LinearLayout>

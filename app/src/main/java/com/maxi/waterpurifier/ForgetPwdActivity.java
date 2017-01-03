@@ -1,6 +1,7 @@
 package com.maxi.waterpurifier;
 
 import android.os.Bundle;
+import android.os.CountDownTimer;
 import android.text.TextUtils;
 import android.view.View;
 import android.widget.EditText;
@@ -24,12 +25,14 @@ import okhttp3.MediaType;
 
 public class ForgetPwdActivity extends BaseActivity implements View.OnClickListener {
 
-    private ImageView mIvSendCode;
+    private TextView mIvSendCode;
     private ImageView mIvBtnForgetPwd;
 
     private EditText mEtUsername;
     private EditText mEtPassword;
     private EditText mEtValidateCode;
+
+    private CountDownTimer mTime;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,10 +48,22 @@ public class ForgetPwdActivity extends BaseActivity implements View.OnClickListe
         mEtPassword = (EditText)findViewById(R.id.et_password);
         mEtValidateCode = (EditText)findViewById(R.id.et_validatecode);
 
-        mIvSendCode = (ImageView) findViewById(R.id.iv_btn_send_code);
+        mIvSendCode = (TextView) findViewById(R.id.iv_btn_send_code);
         mIvSendCode.setOnClickListener(this);
         mIvBtnForgetPwd = (ImageView) findViewById(R.id.iv_btn_forget_pwd);
         mIvBtnForgetPwd.setOnClickListener(this);
+
+        mTime = new CountDownTimer(60000, 1000) {
+            public void onTick(long millisUntilFinished) {
+                mIvSendCode.setClickable(false);
+                mIvSendCode.setText("剩余" + millisUntilFinished / 1000 + "秒");
+            }
+
+            public void onFinish() {
+                mIvSendCode.setClickable(true);
+                mIvSendCode.setText("获取验证码");
+            }
+        };
     }
 
     @Override
@@ -130,7 +145,7 @@ public class ForgetPwdActivity extends BaseActivity implements View.OnClickListe
                 application.loginUser = response.getContent();
                 int code = response.getCode();
                 if(code > 0) {
-                    //TODO
+                    mTime.start();
                 } else {
                     Toast.makeText(getApplicationContext(), response.getError(), Toast.LENGTH_SHORT).show();
                 }
