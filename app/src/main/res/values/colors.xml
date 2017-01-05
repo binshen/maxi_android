@@ -10,4 +10,7 @@
 
     <color name="maxi_head_main_color">#ff2698f9</color>
     <color name="bottom_nav_color">#ff2698fa</color>
+
+    <color name="device_status_start">#ff6bb3ed</color>
+    <color name="device_status_stop">#ffff3f54</color>
 </resources>

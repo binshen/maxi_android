@@ -30,24 +30,26 @@ public class DeviceMainActivity extends BaseActivity implements View.OnClickList
         RelativeLayout mHeadLayout = (RelativeLayout) findViewById(R.id.head_layout);
         mHeadLayout.setBackgroundColor(getResources().getColor(R.color.maxi_head_main_color));
         ImageView btn_head_left = (ImageView) findViewById(R.id.btn_head_left);
+        btn_head_left.setImageResource(R.mipmap.btn_back2);
         btn_head_left.setOnClickListener(this);
         TextView mTvHeader = (TextView) findViewById(R.id.tv_head_title);
         mTvHeader.setText("淼溪净水");
+        mTvHeader.setTextColor(getResources().getColor(R.color.white));
         ImageView btn_head_right = (ImageView) findViewById(R.id.btn_head_right);
-        btn_head_right.setImageResource(R.mipmap.icon_add_device);
+        btn_head_right.setImageResource(R.mipmap.icon_device_add);
         btn_head_right.setOnClickListener(this);
 
         mDevices = new ArrayList<>();
         Device d1 = new Device();
         d1.set_id("id_1");
-        d1.setName("净水器A");
+        d1.setName("淼溪净水器设备1");
         d1.setStatus(1);
         d1.setWaterQuality(1);
         mDevices.add(d1);
 
         Device d2 = new Device();
         d2.set_id("id_2");
-        d2.setName("净水器B");
+        d2.setName("淼溪净水器设备2");
         d2.setStatus(0);
         d1.setWaterQuality(1);
         mDevices.add(d2);
