@@ -77,6 +77,6 @@ public class DeviceMainActivity extends BaseActivity implements View.OnClickList
 
     @Override
     public void onItemClick(AdapterView<?> adapterView, View view, int position, long l) {
-        Toast.makeText(getApplicationContext(), mDevices.get(position).get_id(), Toast.LENGTH_SHORT).show();
+        Toast.makeText(getApplicationContext(), mDevices.get(position).getName(), Toast.LENGTH_SHORT).show();
     }
 }
