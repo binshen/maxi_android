@@ -39,6 +39,8 @@
         <activity
             android:name=".DeviceMainActivity"
             android:screenOrientation="portrait" />
+        <activity android:name=".DeviceUpdateNameActivity" />
+        <activity android:name=".DeviceRechargeActivity"></activity>
     </application>
 
 </manifest>
