@@ -2,7 +2,6 @@ package com.maxi.waterpurifier;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.text.TextUtils;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageView;
@@ -58,17 +57,20 @@ public class LoginActivity extends BaseActivity implements View.OnClickListener 
                 break;
 
             case R.id.iv_btn_login:
-                String username = mEtUsername.getText().toString().trim();
-                String password = mEtPassword.getText().toString().trim();
-                if(TextUtils.isEmpty(username)) {
-                    Toast.makeText(this, "请输入手机号", Toast.LENGTH_SHORT).show();
-                    return;
-                }
-                if(TextUtils.isEmpty(password)) {
-                    Toast.makeText(this, "请输入密码", Toast.LENGTH_SHORT).show();
-                    return;
-                }
-                login(username, password);
+//                String username = mEtUsername.getText().toString().trim();
+//                String password = mEtPassword.getText().toString().trim();
+//                if(TextUtils.isEmpty(username)) {
+//                    Toast.makeText(this, "请输入手机号", Toast.LENGTH_SHORT).show();
+//                    return;
+//                }
+//                if(TextUtils.isEmpty(password)) {
+//                    Toast.makeText(this, "请输入密码", Toast.LENGTH_SHORT).show();
+//                    return;
+//                }
+//                login(username, password);
+
+                startActivity(new Intent(getApplicationContext(), MainActivity.class));
+                finish();
                 break;
 
             case R.id.tv_btn_forget_pwd:

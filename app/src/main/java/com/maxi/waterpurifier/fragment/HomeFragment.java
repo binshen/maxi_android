@@ -1,6 +1,7 @@
 package com.maxi.waterpurifier.fragment;
 
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.view.LayoutInflater;
@@ -14,6 +15,7 @@ import com.daimajia.slider.library.SliderTypes.BaseSliderView;
 import com.daimajia.slider.library.SliderTypes.DefaultSliderView;
 import com.daimajia.slider.library.Tricks.ViewPagerEx;
 import com.etsy.android.grid.StaggeredGridView;
+import com.maxi.waterpurifier.DeviceMainActivity;
 import com.maxi.waterpurifier.R;
 import com.maxi.waterpurifier.adapter.MainAdAdapter;
 import com.maxi.waterpurifier.base.BaseFragment;
@@ -133,7 +135,8 @@ public class HomeFragment extends BaseFragment implements BaseSliderView.OnSlide
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.itv_main_icon_1:
-                Toast.makeText(getContext(), "您点击了：淼溪净水", Toast.LENGTH_SHORT).show();
+                //Toast.makeText(getContext(), "您点击了：淼溪净水", Toast.LENGTH_SHORT).show();
+                startActivity(new Intent(getContext(), DeviceMainActivity.class));
                 break;
             case R.id.itv_main_icon_2:
                 Toast.makeText(getContext(), "您点击了：智能家居", Toast.LENGTH_SHORT).show();

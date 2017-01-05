@@ -36,6 +36,9 @@
         <activity
             android:name=".ForgetPwdActivity"
             android:screenOrientation="portrait" />
+        <activity
+            android:name=".DeviceMainActivity"
+            android:screenOrientation="portrait" />
     </application>
 
 </manifest>
