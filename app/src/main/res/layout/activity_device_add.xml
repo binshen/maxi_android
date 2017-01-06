@@ -9,4 +9,85 @@
 
     <include layout="@layout/widget_head" />
 
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_marginTop="50dp">
+
+        <ImageView
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_centerInParent="true"
+            android:scaleType="fitXY"
+            android:src="@mipmap/icon_wifi"/>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="连接WIFI"
+            android:textColor="#ff6a6a6a"
+            android:textSize="22sp"
+            android:gravity="center"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="连接一个可用的WIFI，让设备接入网络"
+            android:textColor="#ff6a6a6a"
+            android:textSize="15sp"
+            android:gravity="center"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="WIFI名称"
+            android:textColorHint="#ff6a6a6a"
+            android:textSize="16sp"
+            android:textColor="#ff6a6a6a"
+            android:background="@null"
+            android:inputType="text"  />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="请输入密码"
+            android:textColorHint="#ff6a6a6a"
+            android:textSize="16sp"
+            android:textColor="#ff6a6a6a"
+            android:background="@null"
+            android:inputType="text"  />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:gravity="bottom"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:paddingBottom="40dp" >
+
+        <ImageView
+            android:id="@id/iv_btn_device_next"
+            android:layout_gravity="bottom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/btn_device_next" />
+    </LinearLayout>
+
 </LinearLayout>
