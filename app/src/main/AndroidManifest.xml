@@ -39,8 +39,19 @@
         <activity
             android:name=".DeviceMainActivity"
             android:screenOrientation="portrait" />
-        <activity android:name=".DeviceUpdateNameActivity" />
-        <activity android:name=".DeviceRechargeActivity"></activity>
+        <activity
+            android:name=".DeviceUpdateNameActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".DeviceRechargeActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".DeviceDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".DeviceAddActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name=".DeviceConfigActivity"></activity>
     </application>
 
 </manifest>

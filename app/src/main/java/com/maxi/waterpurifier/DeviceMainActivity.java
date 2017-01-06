@@ -1,5 +1,6 @@
 package com.maxi.waterpurifier;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
@@ -7,7 +8,6 @@ import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.maxi.waterpurifier.adapter.DeviceListAdapter;
 import com.maxi.waterpurifier.base.BaseActivity;
@@ -70,13 +70,14 @@ public class DeviceMainActivity extends BaseActivity implements View.OnClickList
                 break;
 
             case R.id.btn_head_right:
-
+                startActivity(new Intent(this, DeviceAddActivity.class));
                 break;
         }
     }
 
     @Override
     public void onItemClick(AdapterView<?> adapterView, View view, int position, long l) {
-        Toast.makeText(getApplicationContext(), mDevices.get(position).getName(), Toast.LENGTH_SHORT).show();
+        //Toast.makeText(getApplicationContext(), mDevices.get(position).getName(), Toast.LENGTH_SHORT).show();
+        startActivity(new Intent(this, DeviceDetailActivity.class));
     }
 }
