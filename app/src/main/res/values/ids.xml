@@ -30,4 +30,10 @@
     <item type="id" name="tv_device_name">false</item>
     <item type="id" name="tv_device_water_quality">false</item>
     <item type="id" name="tv_device_status">false</item>
+
+    <item type="id" name="rl_icon_device_logo">false</item>
+    <item type="id" name="rl_icon_device_recharge">false</item>
+    <item type="id" name="iv_icon_device_logo">false</item>
+    <item type="id" name="iv_icon_device_recharge">false</item>
+    <item type="id" name="iv_btn_device_unbind">false</item>
 </resources>

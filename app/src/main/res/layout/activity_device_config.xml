@@ -8,5 +8,101 @@
     tools:context="com.maxi.waterpurifier.DeviceConfigActivity">
 
     <include layout="@layout/widget_head" />
-    
+
+    <RelativeLayout
+        android:id="@id/rl_icon_device_logo"
+        android:layout_width="match_parent"
+        android:layout_height="110dp"
+        android:layout_gravity="center"
+        android:padding="20dp">
+
+        <ImageView
+            android:id="@id/iv_icon_device_logo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:scaleType="fitXY"
+            android:src="@mipmap/icon_device_logo"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="净化器名称变更"
+            android:textColor="#ff6a6a6a"
+            android:textSize="16sp"
+            android:paddingLeft="10dp"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/iv_icon_device_logo"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:src="@mipmap/btn_next"/>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#fff1f1f1" />
+
+    </LinearLayout>
+
+
+    <RelativeLayout
+        android:id="@id/rl_icon_device_recharge"
+        android:layout_width="match_parent"
+        android:layout_height="110dp"
+        android:layout_gravity="center"
+        android:padding="20dp">
+
+        <ImageView
+            android:id="@id/iv_icon_device_recharge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:scaleType="fitXY"
+            android:src="@mipmap/icon_device_recharge"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="水量充值"
+            android:textColor="#ff6a6a6a"
+            android:textSize="16sp"
+            android:paddingLeft="10dp"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/iv_icon_device_recharge"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:src="@mipmap/btn_next"/>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:gravity="bottom"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:paddingBottom="40dp" >
+
+        <ImageView
+            android:id="@id/iv_btn_device_unbind"
+            android:layout_gravity="bottom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/btn_device_unbind" />
+    </LinearLayout>
+
 </LinearLayout>
