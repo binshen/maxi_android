@@ -10,6 +10,8 @@ import com.maxi.waterpurifier.base.BaseActivity;
 
 public class DeviceAddActivity extends BaseActivity implements View.OnClickListener {
 
+    private ImageView mIvBtnDeviceNext;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -23,6 +25,9 @@ public class DeviceAddActivity extends BaseActivity implements View.OnClickListe
         TextView mTvHeader = (TextView) findViewById(R.id.tv_head_title);
         mTvHeader.setText("设备配对");
         mTvHeader.setTextColor(getResources().getColor(R.color.white));
+
+        mIvBtnDeviceNext = (ImageView) findViewById(R.id.iv_btn_device_next);
+        mIvBtnDeviceNext.setOnClickListener(this);
     }
 
     @Override
@@ -30,6 +35,10 @@ public class DeviceAddActivity extends BaseActivity implements View.OnClickListe
 
         switch (v.getId()) {
             case R.id.btn_head_left:
+                finish();
+                break;
+
+            case R.id.iv_btn_device_next:
                 finish();
                 break;
         }

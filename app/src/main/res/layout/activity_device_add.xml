@@ -50,27 +50,48 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:padding="20dp">
+        android:layout_marginTop="50dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:background="@mipmap/bg_device_wifi">
 
-        <EditText
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="WIFI名称"
-            android:textColorHint="#ff6a6a6a"
-            android:textSize="16sp"
-            android:textColor="#ff6a6a6a"
-            android:background="@null"
-            android:inputType="text"  />
+            android:layout_height="0dp"
+            android:layout_weight="1">
 
-        <EditText
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:paddingLeft="10dp"
+                android:hint="WIFI名称"
+                android:textColorHint="#ff6a6a6a"
+                android:textSize="16sp"
+                android:textColor="#ff6a6a6a"
+                android:background="@null"
+                android:inputType="text"  />
+
+        </LinearLayout>
+
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="请输入密码"
-            android:textColorHint="#ff6a6a6a"
-            android:textSize="16sp"
-            android:textColor="#ff6a6a6a"
-            android:background="@null"
-            android:inputType="text"  />
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:paddingLeft="10dp"
+                android:hint="请输入密码"
+                android:textColorHint="#ff6a6a6a"
+                android:textSize="16sp"
+                android:textColor="#ff6a6a6a"
+                android:background="@null"
+                android:inputType="text"  />
+
+        </LinearLayout>
 
     </LinearLayout>
 
