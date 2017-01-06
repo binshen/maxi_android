@@ -36,4 +36,7 @@
     <item type="id" name="iv_icon_device_logo">false</item>
     <item type="id" name="iv_icon_device_recharge">false</item>
     <item type="id" name="iv_btn_device_unbind">false</item>
+
+    <item type="id" name="iv_btn_device_recharge">false</item>
+    <item type="id" name="iv_btn_device_update_name">false</item>
 </resources>

@@ -10,6 +10,8 @@ import com.maxi.waterpurifier.base.BaseActivity;
 
 public class DeviceUpdateNameActivity extends BaseActivity implements View.OnClickListener {
 
+    private ImageView mIvBtnDeviceUpdateName;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -21,8 +23,11 @@ public class DeviceUpdateNameActivity extends BaseActivity implements View.OnCli
         btn_head_left.setImageResource(R.mipmap.btn_back2);
         btn_head_left.setOnClickListener(this);
         TextView mTvHeader = (TextView) findViewById(R.id.tv_head_title);
-        mTvHeader.setText("修改名字");
+        mTvHeader.setText("修改名称");
         mTvHeader.setTextColor(getResources().getColor(R.color.white));
+
+        mIvBtnDeviceUpdateName = (ImageView) findViewById(R.id.iv_btn_device_update_name);
+        mIvBtnDeviceUpdateName.setOnClickListener(this);
     }
 
     @Override
@@ -30,6 +35,10 @@ public class DeviceUpdateNameActivity extends BaseActivity implements View.OnCli
 
         switch (v.getId()) {
             case R.id.btn_head_left:
+                finish();
+                break;
+
+            case R.id.iv_btn_device_update_name:
                 finish();
                 break;
         }
