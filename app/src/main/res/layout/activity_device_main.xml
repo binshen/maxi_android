@@ -9,7 +9,7 @@
 
     <include layout="@layout/widget_head" />
 
-    <RelativeLayout
+    <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="160dp">
 
@@ -20,7 +20,16 @@
             android:scaleType="fitXY"
             android:src="@mipmap/device_top" />
 
-    </RelativeLayout>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="2台"
+            android:textColor="@color/white"
+            android:textSize="30sp"
+            android:paddingTop="60dp"
+            android:paddingLeft="50dp"/>
+
+    </FrameLayout>
 
     <ScrollView
         android:layout_width="match_parent"
