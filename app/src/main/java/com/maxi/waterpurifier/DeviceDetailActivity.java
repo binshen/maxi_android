@@ -3,6 +3,10 @@ package com.maxi.waterpurifier;
 import android.content.Intent;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentPagerAdapter;
+import android.support.v4.view.ViewPager;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.RadioButton;
@@ -12,12 +16,19 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.maxi.waterpurifier.base.BaseActivity;
+import com.maxi.waterpurifier.fragment.FilterStatusFragment;
+import com.maxi.waterpurifier.fragment.WaterYieldFragment;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class DeviceDetailActivity extends BaseActivity implements View.OnClickListener, RadioGroup.OnCheckedChangeListener {
 
     private RadioGroup mRgDeviceGroup;
     private RadioButton mRbBtnFilterStatus;
     private RadioButton mRbBtnWaterYield;
+
+    private ViewPager mViewPager;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,6 +52,16 @@ public class DeviceDetailActivity extends BaseActivity implements View.OnClickLi
 
         mRbBtnFilterStatus = (RadioButton) findViewById(R.id.rb_btn_filter_status);
         mRbBtnWaterYield = (RadioButton) findViewById(R.id.rb_btn_water_yield);
+
+        mViewPager = (ViewPager) findViewById(R.id.viewPager);
+
+        FilterStatusFragment fsFragment = new FilterStatusFragment();
+        WaterYieldFragment wyFragment = new WaterYieldFragment();
+        List<Fragment> fragments = new ArrayList<>();
+        fragments.add(fsFragment);
+        fragments.add(wyFragment);
+        mViewPager.setAdapter(new MyFragmentPagerAdapter(getSupportFragmentManager(), fragments));
+        mViewPager.setCurrentItem(0);
     }
 
     @Override
@@ -61,17 +82,37 @@ public class DeviceDetailActivity extends BaseActivity implements View.OnClickLi
     public void onCheckedChanged(RadioGroup radioGroup, int checkedId) {
 
         Drawable drawable = getResources().getDrawable(R.drawable.bg_underline);
-        //drawable.setBounds(0, 0, 100, 10);
         switch (checkedId) {
             case R.id.rb_btn_filter_status:
+                mViewPager.setCurrentItem(0);
                 mRbBtnFilterStatus.setCompoundDrawablesWithIntrinsicBounds(null, null, null, drawable);
                 mRbBtnWaterYield.setCompoundDrawablesWithIntrinsicBounds(null, null, null, null);
                 break;
 
             case R.id.rb_btn_water_yield:
+                mViewPager.setCurrentItem(1);
                 mRbBtnFilterStatus.setCompoundDrawablesWithIntrinsicBounds(null, null, null, null);
                 mRbBtnWaterYield.setCompoundDrawablesWithIntrinsicBounds(null, null, null, drawable);
                 break;
+        }
+    }
+
+    public class MyFragmentPagerAdapter extends FragmentPagerAdapter {
+        private List<Fragment> list;
+
+        public MyFragmentPagerAdapter(FragmentManager fm, List<Fragment> list) {
+            super(fm);
+            this.list = list;
+        }
+
+        @Override
+        public Fragment getItem(int position) {
+            return list.get(position);
+        }
+
+        @Override
+        public int getCount() {
+            return list.size();
         }
     }
 }
