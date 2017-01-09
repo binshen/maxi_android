@@ -4,6 +4,303 @@
     android:layout_height="match_parent"
     tools:context="com.maxi.waterpurifier.fragment.WaterYieldFragment">
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingTop="10dp"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:paddingBottom="5dp">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/icon_water_left" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="剩余水量（30L）"
+                android:textColor="#ff6a6a6a"
+                android:textSize="16sp"
+                android:paddingLeft="20dp"
+                android:gravity="center_vertical"/>
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#ffededed"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingTop="5dp"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:paddingBottom="10dp">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/icon_water_7day" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="7天用水量统计"
+                android:textColor="#ff6a6a6a"
+                android:textSize="16sp"
+                android:paddingLeft="20dp" />
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="4dp"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:paddingBottom="4dp">
+
+            <ImageView
+                android:id="@+id/iv_icon_water_no_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/icon_water_no_1"
+                android:layout_centerVertical="true"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="2016-12-28"
+                android:textColor="#ffa8a8a8"
+                android:textSize="14sp"
+                android:layout_toRightOf="@id/iv_icon_water_no_1"
+                android:paddingLeft="20dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1L"
+                android:textColor="#ff65b9f7"
+                android:textSize="16sp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="4dp"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:paddingBottom="4dp">
+
+            <ImageView
+                android:id="@+id/iv_icon_water_no_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/icon_water_no_2"
+                android:layout_centerVertical="true"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="2016-12-27"
+                android:textColor="#ffa8a8a8"
+                android:textSize="14sp"
+                android:layout_toRightOf="@id/iv_icon_water_no_2"
+                android:paddingLeft="20dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="2L"
+                android:textColor="#ff65b9f7"
+                android:textSize="16sp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="4dp"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:paddingBottom="4dp">
+
+            <ImageView
+                android:id="@+id/iv_icon_water_no_3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/icon_water_no_3"
+                android:layout_centerVertical="true"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="2016-12-26"
+                android:textColor="#ffa8a8a8"
+                android:textSize="14sp"
+                android:layout_toRightOf="@id/iv_icon_water_no_3"
+                android:paddingLeft="20dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0L"
+                android:textColor="#ff65b9f7"
+                android:textSize="16sp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="4dp"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:paddingBottom="4dp">
+
+            <ImageView
+                android:id="@+id/iv_icon_water_no_4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/icon_water_no_4"
+                android:layout_centerVertical="true"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="2016-12-25"
+                android:textColor="#ffa8a8a8"
+                android:textSize="14sp"
+                android:layout_toRightOf="@id/iv_icon_water_no_4"
+                android:paddingLeft="20dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0L"
+                android:textColor="#ff65b9f7"
+                android:textSize="16sp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="4dp"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:paddingBottom="4dp">
+
+            <ImageView
+                android:id="@+id/iv_icon_water_no_5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/icon_water_no_5"
+                android:layout_centerVertical="true"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="2016-12-24"
+                android:textColor="#ffa8a8a8"
+                android:textSize="14sp"
+                android:layout_toRightOf="@id/iv_icon_water_no_5"
+                android:paddingLeft="20dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0L"
+                android:textColor="#ff65b9f7"
+                android:textSize="16sp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="4dp"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:paddingBottom="4dp">
+
+            <ImageView
+                android:id="@+id/iv_icon_water_no_6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/icon_water_no_6"
+                android:layout_centerVertical="true"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="2016-12-23"
+                android:textColor="#ffa8a8a8"
+                android:textSize="14sp"
+                android:layout_toRightOf="@id/iv_icon_water_no_6"
+                android:paddingLeft="20dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0L"
+                android:textColor="#ff65b9f7"
+                android:textSize="16sp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="4dp"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:paddingBottom="4dp">
+
+            <ImageView
+                android:id="@+id/iv_icon_water_no_7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/icon_water_no_7"
+                android:layout_centerVertical="true"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="2016-12-22"
+                android:textColor="#ffa8a8a8"
+                android:textSize="14sp"
+                android:layout_toRightOf="@id/iv_icon_water_no_7"
+                android:paddingLeft="20dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0L"
+                android:textColor="#ff65b9f7"
+                android:textSize="16sp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true" />
+        </RelativeLayout>
+
+    </LinearLayout>
 
 </FrameLayout>

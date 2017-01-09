@@ -62,6 +62,28 @@ public class DeviceDetailActivity extends BaseActivity implements View.OnClickLi
         fragments.add(wyFragment);
         mViewPager.setAdapter(new MyFragmentPagerAdapter(getSupportFragmentManager(), fragments));
         mViewPager.setCurrentItem(0);
+
+        mViewPager.setOnPageChangeListener(new ViewPager.OnPageChangeListener() {
+            @Override
+            public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
+            }
+
+            @Override
+            public void onPageSelected(int position) {
+                switch (position) {
+                    case 0:
+                        mRgDeviceGroup.check(R.id.rb_btn_filter_status);
+                        break;
+                    case 1:
+                        mRgDeviceGroup.check(R.id.rb_btn_water_yield);
+                        break;
+                }
+            }
+
+            @Override
+            public void onPageScrollStateChanged(int state) {
+            }
+        });
     }
 
     @Override
