@@ -51,7 +51,9 @@ public class DeviceDetailActivity extends BaseActivity implements View.OnClickLi
         mRgDeviceGroup.setOnCheckedChangeListener(this);
 
         mRbBtnFilterStatus = (RadioButton) findViewById(R.id.rb_btn_filter_status);
+        mRbBtnFilterStatus.getPaint().setFakeBoldText(true);
         mRbBtnWaterYield = (RadioButton) findViewById(R.id.rb_btn_water_yield);
+        mRbBtnWaterYield.getPaint().setFakeBoldText(true);
 
         mViewPager = (ViewPager) findViewById(R.id.viewPager);
 
@@ -108,13 +110,17 @@ public class DeviceDetailActivity extends BaseActivity implements View.OnClickLi
             case R.id.rb_btn_filter_status:
                 mViewPager.setCurrentItem(0);
                 mRbBtnFilterStatus.setCompoundDrawablesWithIntrinsicBounds(null, null, null, drawable);
+                mRbBtnFilterStatus.setTextColor(getResources().getColor(R.color.device_water_tab1));
                 mRbBtnWaterYield.setCompoundDrawablesWithIntrinsicBounds(null, null, null, null);
+                mRbBtnWaterYield.setTextColor(getResources().getColor(R.color.device_water_tab2));
                 break;
 
             case R.id.rb_btn_water_yield:
                 mViewPager.setCurrentItem(1);
                 mRbBtnFilterStatus.setCompoundDrawablesWithIntrinsicBounds(null, null, null, null);
+                mRbBtnFilterStatus.setTextColor(getResources().getColor(R.color.device_water_tab2));
                 mRbBtnWaterYield.setCompoundDrawablesWithIntrinsicBounds(null, null, null, drawable);
+                mRbBtnWaterYield.setTextColor(getResources().getColor(R.color.device_water_tab1));
                 break;
         }
     }

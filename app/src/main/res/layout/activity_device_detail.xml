@@ -141,7 +141,9 @@
             android:layout_width="match_parent"
             android:layout_height="55dp"
             android:orientation="horizontal"
-            android:layout_alignParentTop="true">
+            android:layout_alignParentTop="true"
+            android:paddingLeft="60dp"
+            android:paddingRight="60dp">
 
             <RadioButton
                 android:id="@+id/rb_btn_filter_status"
@@ -153,7 +155,7 @@
                 android:drawableBottom="@drawable/bg_underline"
                 android:gravity="center"
                 android:text="滤芯状态"
-                android:textColor="#ff32a0ff"
+                android:textColor="@color/device_water_tab1"
                 android:textSize="20sp"/>
 
             <RadioButton
@@ -165,7 +167,7 @@
                 android:background="@null"
                 android:gravity="center"
                 android:text="用水量"
-                android:textColor="#ff32a0ff"
+                android:textColor="@color/device_water_tab2"
                 android:textSize="20sp" />
 
         </RadioGroup>
