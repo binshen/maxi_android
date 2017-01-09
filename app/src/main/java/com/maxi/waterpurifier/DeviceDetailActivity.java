@@ -1,15 +1,23 @@
 package com.maxi.waterpurifier;
 
 import android.content.Intent;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.maxi.waterpurifier.base.BaseActivity;
 
-public class DeviceDetailActivity extends BaseActivity implements View.OnClickListener {
+public class DeviceDetailActivity extends BaseActivity implements View.OnClickListener, RadioGroup.OnCheckedChangeListener {
+
+    private RadioGroup mRgDeviceGroup;
+    private RadioButton mRbBtnFilterStatus;
+    private RadioButton mRbBtnWaterYield;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,6 +35,12 @@ public class DeviceDetailActivity extends BaseActivity implements View.OnClickLi
         ImageView btn_head_right = (ImageView) findViewById(R.id.btn_head_right);
         btn_head_right.setImageResource(R.mipmap.icon_device_config);
         btn_head_right.setOnClickListener(this);
+
+        mRgDeviceGroup = (RadioGroup) findViewById(R.id.rg_device_group);
+        mRgDeviceGroup.setOnCheckedChangeListener(this);
+
+        mRbBtnFilterStatus = (RadioButton) findViewById(R.id.rb_btn_filter_status);
+        mRbBtnWaterYield = (RadioButton) findViewById(R.id.rb_btn_water_yield);
     }
 
     @Override
@@ -39,6 +53,24 @@ public class DeviceDetailActivity extends BaseActivity implements View.OnClickLi
 
             case R.id.btn_head_right:
                 startActivity(new Intent(this, DeviceConfigActivity.class));
+                break;
+        }
+    }
+
+    @Override
+    public void onCheckedChanged(RadioGroup radioGroup, int checkedId) {
+
+        Drawable drawable = getResources().getDrawable(R.drawable.bg_underline);
+        //drawable.setBounds(0, 0, 100, 10);
+        switch (checkedId) {
+            case R.id.rb_btn_filter_status:
+                mRbBtnFilterStatus.setCompoundDrawablesWithIntrinsicBounds(null, null, null, drawable);
+                mRbBtnWaterYield.setCompoundDrawablesWithIntrinsicBounds(null, null, null, null);
+                break;
+
+            case R.id.rb_btn_water_yield:
+                mRbBtnFilterStatus.setCompoundDrawablesWithIntrinsicBounds(null, null, null, null);
+                mRbBtnWaterYield.setCompoundDrawablesWithIntrinsicBounds(null, null, null, drawable);
                 break;
         }
     }

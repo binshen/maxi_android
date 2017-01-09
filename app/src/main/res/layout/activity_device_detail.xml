@@ -12,7 +12,7 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="25dp"
         android:layout_marginBottom="20dp">
 
         <ImageView
@@ -128,9 +128,54 @@
                     android:textSize="16sp"/>
 
             </LinearLayout>
-
         </LinearLayout>
-
     </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingTop="5dp">
+
+        <RadioGroup
+            android:id="@+id/rg_device_group"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:orientation="horizontal"
+            android:layout_alignParentTop="true">
+
+            <RadioButton
+                android:id="@+id/rb_btn_filter_status"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_weight="1"
+                android:button="@null"
+                android:background="@null"
+                android:drawableBottom="@drawable/bg_underline"
+                android:gravity="center"
+                android:text="滤芯状态"
+                android:textColor="#ff32a0ff"
+                android:textSize="20sp"/>
+
+            <RadioButton
+                android:id="@+id/rb_btn_water_yield"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_weight="1"
+                android:button="@null"
+                android:background="@null"
+                android:gravity="center"
+                android:text="用水量"
+                android:textColor="#ff32a0ff"
+                android:textSize="20sp" />
+
+        </RadioGroup>
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/viewPager"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1" >
+        </android.support.v4.view.ViewPager>
+    </RelativeLayout>
 
 </LinearLayout>
