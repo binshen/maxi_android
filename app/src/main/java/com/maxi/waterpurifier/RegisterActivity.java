@@ -15,6 +15,7 @@ import com.maxi.waterpurifier.base.Constants;
 import com.maxi.waterpurifier.base.Result;
 import com.maxi.waterpurifier.base.ResultCallback;
 import com.maxi.waterpurifier.model.User;
+import com.maxi.waterpurifier.utils.Validator;
 import com.zhy.http.okhttp.OkHttpUtils;
 
 import java.util.HashMap;
@@ -82,6 +83,10 @@ public class RegisterActivity extends BaseActivity implements View.OnClickListen
                     Toast.makeText(getApplicationContext(), "请输入手机号", Toast.LENGTH_SHORT).show();
                     return;
                 }
+                if(Validator.isMobile(tel)) {
+                    Toast.makeText(this, "请输入正确的手机号", Toast.LENGTH_SHORT).show();
+                    return;
+                }
                 if(TextUtils.isEmpty(code)) {
                     Toast.makeText(getApplicationContext(), "请输入验证码", Toast.LENGTH_SHORT).show();
                     return;
@@ -96,6 +101,10 @@ public class RegisterActivity extends BaseActivity implements View.OnClickListen
             case R.id.iv_btn_send_code:
                 if(TextUtils.isEmpty(tel)) {
                     Toast.makeText(getApplicationContext(), "请输入手机号", Toast.LENGTH_SHORT).show();
+                    return;
+                }
+                if(Validator.isMobile(tel)) {
+                    Toast.makeText(this, "请输入正确的手机号", Toast.LENGTH_SHORT).show();
                     return;
                 }
                 sendMessage(tel);
