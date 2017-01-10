@@ -61,6 +61,7 @@
             android:layout_weight="1">
 
             <EditText
+                android:id="@id/et_wifi_sid"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical"
@@ -80,6 +81,7 @@
             android:layout_weight="1">
 
             <EditText
+                android:id="@id/et_wifi_psw"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical"

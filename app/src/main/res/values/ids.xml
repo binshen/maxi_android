@@ -40,4 +40,7 @@
     <item type="id" name="iv_btn_device_recharge">false</item>
     <item type="id" name="iv_btn_device_update_name">false</item>
     <item type="id" name="iv_btn_device_next">false</item>
+
+    <item type="id" name="et_wifi_sid">false</item>
+    <item type="id" name="et_wifi_psw">false</item>
 </resources>
