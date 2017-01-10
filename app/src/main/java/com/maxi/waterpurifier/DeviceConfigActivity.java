@@ -1,5 +1,6 @@
 package com.maxi.waterpurifier;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -54,6 +55,8 @@ public class DeviceConfigActivity extends BaseActivity implements View.OnClickLi
                 break;
 
             case R.id.iv_btn_device_unbind:
+                setResult(Activity.RESULT_OK, new Intent());
+                finish();
                 break;
         }
     }

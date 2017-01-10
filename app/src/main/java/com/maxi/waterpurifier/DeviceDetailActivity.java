@@ -1,5 +1,6 @@
 package com.maxi.waterpurifier;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
@@ -97,7 +98,7 @@ public class DeviceDetailActivity extends BaseActivity implements View.OnClickLi
                 break;
 
             case R.id.btn_head_right:
-                startActivity(new Intent(this, DeviceConfigActivity.class));
+                startActivityForResult(new Intent(this, DeviceConfigActivity.class), 1);
                 break;
         }
     }
@@ -141,6 +142,21 @@ public class DeviceDetailActivity extends BaseActivity implements View.OnClickLi
         @Override
         public int getCount() {
             return list.size();
+        }
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+
+        if (resultCode == RESULT_CANCELED) {
+            return;
+        }
+
+        if (requestCode == 1) {
+            if(resultCode == Activity.RESULT_OK){
+                finish();
+            }
         }
     }
 }
