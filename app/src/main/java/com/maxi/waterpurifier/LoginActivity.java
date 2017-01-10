@@ -65,7 +65,7 @@ public class LoginActivity extends BaseActivity implements View.OnClickListener 
                     Toast.makeText(this, "请输入手机号", Toast.LENGTH_SHORT).show();
                     return;
                 }
-                if(Validator.isMobile(username)) {
+                if(!Validator.isMobile(username)) {
                     Toast.makeText(this, "请输入正确的手机号", Toast.LENGTH_SHORT).show();
                     return;
                 }

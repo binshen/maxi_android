@@ -83,7 +83,7 @@ public class ForgetPwdActivity extends BaseActivity implements View.OnClickListe
                     Toast.makeText(getApplicationContext(), "请输入手机号", Toast.LENGTH_SHORT).show();
                     return;
                 }
-                if(Validator.isMobile(tel)) {
+                if(!Validator.isMobile(tel)) {
                     Toast.makeText(this, "请输入正确的手机号", Toast.LENGTH_SHORT).show();
                     return;
                 }
@@ -103,7 +103,7 @@ public class ForgetPwdActivity extends BaseActivity implements View.OnClickListe
                     Toast.makeText(getApplicationContext(), "请输入手机号", Toast.LENGTH_SHORT).show();
                     return;
                 }
-                if(Validator.isMobile(tel)) {
+                if(!Validator.isMobile(tel)) {
                     Toast.makeText(this, "请输入正确的手机号", Toast.LENGTH_SHORT).show();
                     return;
                 }

@@ -8,8 +8,7 @@ import android.text.TextUtils;
 
 public class Validator {
     public static boolean isMobile(String value) {
-        String telRegex = "[1][358]\\d{9}";
         if (TextUtils.isEmpty(value)) return false;
-        else return value.matches(telRegex);
+        return value.matches("[1][358]\\d{9}");
     }
 }
