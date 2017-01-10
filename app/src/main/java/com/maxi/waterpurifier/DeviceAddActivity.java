@@ -52,11 +52,12 @@ public class DeviceAddActivity extends BaseActivity implements View.OnClickListe
             public void onReceive(Context context, Intent intent) {
                 ConnectivityManager connectivityManager = (ConnectivityManager)getSystemService(Context.CONNECTIVITY_SERVICE);
                 NetworkInfo networkInfo = connectivityManager.getActiveNetworkInfo();
-                if (networkInfo != null && networkInfo.isConnected()) {
-                    mEtWifiSid.setText(getSSid());
+                String ssid = getSSid();
+                if (networkInfo != null && networkInfo.isConnected() && !ssid.equals("")) {
+                    mEtWifiSid.setText(ssid);
                     mEtWifiPsw.requestFocus();
                     mIvBtnDeviceNext.setEnabled(true);
-                }else {
+                } else {
                     mEtWifiSid.setText("");
                     mEtWifiSid.requestFocus();
                     mIvBtnDeviceNext.setEnabled(false);
