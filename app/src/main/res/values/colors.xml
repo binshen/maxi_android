@@ -17,5 +17,5 @@
     <color name="device_water_tab1">#ff32a0ff</color>
     <color name="device_water_tab2">#ff353535</color>
 
-    <color name="text_cursor">#ff979797</color>
+    <color name="text_cursor">#ff6a6a6a</color>
 </resources>
