@@ -1,5 +1,6 @@
 package com.maxi.waterpurifier;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -27,12 +28,27 @@ public class NaviActivity extends BaseActivity implements View.OnClickListener {
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.iv_btn_login:
-                startActivity(new Intent(this, LoginActivity.class));
+                startActivityForResult(new Intent(this, LoginActivity.class), 1);
                 break;
 
             case R.id.iv_btn_register:
                 startActivity(new Intent(this, RegisterActivity.class));
                 break;
+        }
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+
+        if (resultCode == RESULT_CANCELED) {
+            return;
+        }
+
+        if (requestCode == 1) {
+            if(resultCode == Activity.RESULT_OK){
+                finish();
+            }
         }
     }
 }

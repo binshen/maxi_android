@@ -1,5 +1,6 @@
 package com.maxi.waterpurifier;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
@@ -107,6 +108,7 @@ public class LoginActivity extends BaseActivity implements View.OnClickListener 
                     }
                 } else {
                     startActivity(new Intent(getApplicationContext(), MainActivity.class));
+                    setResult(Activity.RESULT_OK, new Intent());
                     finish();
                 }
             }
